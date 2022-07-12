@@ -1,0 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.lesson-item img {
+	width: 100%;
+	overflow: hidden;
+}
