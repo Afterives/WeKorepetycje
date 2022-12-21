@@ -10,58 +10,55 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    
 </head>
 
 <body>
     <!--Header strony-->
     <header class="">
-        <nav class="navbar anvbar-expend-lg">
+        <nav class="navbar navbar-expend-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">WeKorepetycje</a>
-                <button class="navbar-toggler" type="button" data-toogle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toogle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="navbar-item active">
-                            <a class="nav-link" href="index.html">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="offer.html">Oferty korepetycji</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">O nas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Kontakt</a>
-                        </li>
-                    </ul>
+                <a class="navbar-brand" href="index.html">WebKorepetycje</a>
+                <div class="buttons">
+                    <a href="/login" class="btn btn-1">Logowanie</a>
+                    <a href="/register" class="btn btn-2">Rejestracja</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!--Strona / banner-->
-    <div class="banner header-text">
-        <div class="owl-banner owl-carousel">
-            <div class="banner-item-01">
-                <div class="text-content">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(images/education_theme1.jpg)">
+                <div class="container">
                     <h4>Najlepsze oferty</h4>
                 </div>
             </div>
-            <div class="banner-item-02">
-                <div class="text-content">
+            <div class="carousel-item" style="background-image: url(images/education_theme2.jpg)">
+                <div class="container">
                     <h4>Koreteptycje od sprawdzonych nauczycieli</h4>
                 </div>
             </div>
-            <div class="banner-item-03">
-                <div class="text-content">
+            <div class="carousel-item" style="background-image: url(images/education_theme3.jpg)">
+                <div class="container">
                     <h4>Przekonaj się sam!</h4>
                 </div>
             </div>
         </div>
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+            <span class="sr-only"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+            <span class="sr-only"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
     </div>
     <!--Sekcja z wyborem korepetycji-->
     <div class="private-lesson">
@@ -69,15 +66,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Popularne korepetycje</h2>
-                        <a href="korepetycje.html">Zobacz wszystkie korepetycje <i class="fa fa-angle-right0"></i></a>
+                        <h2>Dostępne korepetycje</h2>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study1.jpg" alt=""></a>
+                        <a href="angielski.html"><img src="images/study1.jpg" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>Angielski</h4></a>
+                            <a href="angielski.html"><h4>Angielski</h4></a>
                             <h6>60zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -92,9 +88,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study2.jpg"></a>
-                        <div class="donw-content">
-                            <a href="#"><h4>Język Polski</h4></a>
+                        <a href="polski.html"><img src="images/study2.jpg"></a>
+                        <div class="down-content">
+                            <a href="polski.html"><h4>Język Polski</h4></a>
                             <h6>50zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -108,9 +104,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study3.jpg" alt=""></a>
-                        <div class="donw-content">
-                            <a href="#"><h4>Fiyzka</h4></a>
+                        <a href="fizyka.html"><img src="images/study3.jpg" alt=""></a>
+                        <div class="down-content">
+                            <a href="fizyka.html"><h4>Fiyzka</h4></a>
                             <h6>45zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -125,9 +121,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study4.jpg" alt=""></a>
+                        <a href="matematyka.html"><img src="images/study4.jpg" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>Matematyka</h4></a>
+                            <a href="matematyka.html"><h4>Matematyka</h4></a>
                             <h6>70zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -142,9 +138,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study5.jpg" alt=""></a>
+                        <a href="geografia.html"><img src="images/study5.jpg" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>Geografia</h4></a>
+                            <a href="geografia.html"><h4>Geografia</h4></a>
                             <h6>54zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -159,9 +155,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="lesson-item">
-                        <a href="#"><img src="images/study6.jpg" alt=""></a>
+                        <a href="przyroda.html"><img src="images/study6.jpg" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>Przyroda</h4></a>
+                            <a href="przyroda.html"><h4>Przyroda</h4></a>
                             <h6>35zł/h</h6>
                             <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
                             <ul class="stars">
@@ -177,6 +173,68 @@
             </div>
         </div>
     </div>
+
+    <div class="best-teacher">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>O naszych nauczycielach</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="left-content1">
+                        <h3>Przemysław Róg</h3>
+                        <p>Pan Przemysław cieszy się wysokim uznaniem w dziedzinach takich jak informatyka, a konkretnie pisanie aplikacji w technologii Power Apps, automatyzacji itp.</p>
+                        <ul class="lessons-list">
+                            <li>Wysoka zdawalność</li>
+                            <li>Rzetelne podejście do ucznia</li>
+                            <li>Wysoki poziom nauczania przez nauczyciela</li>
+                            <li>100% zadowolenia!</li>
+                        </ul>
+                    </div>
+                    <div class="left-content2">
+                        <h3>Jan Kowalski</h3>
+                        <p>Pan Jan bardzo prosto i zrozumiale tłumaczy materiał. Uczniowie swoje nadzieje w opanowanie materiału bardzo chętnie powierzają panu Janowi i nigdy uczniów nie zawodzi.</p>
+                        <ul class="lessons-list">
+                            <li>Poprawne podejście do studenta</li>
+                            <li>Szeroki zakres kompetencji naucznaia</li>
+                            <li>Wykwalifikowany z dziedzinach takich jak geografia oraz historia</li>
+                            <li>Niemal 100% zadowolenie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="right-image1">
+                        <img src="images/Teacher1.JPG" height="290" width="250" alt="">
+                    </div>
+                    <div class="right-image2">
+                        <img src="images/teacher2.jpg" height="290" width="250" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-content">
+                    <p>Copyright &copy; 2022 WebKorepetycje </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+ integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
