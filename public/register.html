@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeKorepetycje - Rejestracja</title>
+    <meta name="description" content="Strona do rezerwacja korepetycji, zapraszam!">
+    <meta name="keywords" content="Nauka, korepetycje, edukacja, wykształcenie, matura, podstawa, rozszerzenie">
+    <meta name="author" content="Przemysław Róg">
+
+    <link rel="stylesheet" href="css/registerstyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Rejestracja</h1>
+        <form action="/register" method="POST">
+            <input type="text" placeholder="Imie" name="firstName">
+            <input type="text" placeholder="Nazwisko" name="lastName">
+            <input type="text" placeholder="Nazwa użytkownika" name="userName">
+            <input type="password" placeholder="Hasło" name="password">
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Akceptuje warunki regulaminu</label>
+        </div>
+        <button type="submit" class="btn btn-primary form-control">Zarejestruj się</button>
+    </form>
+        <div class="member">
+            Masz już konto? <a href="/login">Zaloguj się</a><br><br>
+            <a href="index.html">Wróć na stronę główną</a>
+        </div>
+    </div>
+
+</body>
+</html>

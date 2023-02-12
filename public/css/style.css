@@ -160,7 +160,6 @@ input[type=submit] {
 }
 .navbar .navbar-brand {
   float: left;
-  margin-top: -12px;
   outline: none;
 }
 .navbar .navbar-brand h2 {

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeKorepetycje - dashboard</title>
+    <meta
+      name="description"
+      content="Strona do rezerwacja korepetycji, zapraszam!"
+    />
+    <meta
+      name="keywords"
+      content="Nauka, korepetycje, edukacja, wykształcenie, matura, podstawa, rozszerzenie"
+    />
+    <meta name="author" content="Przemysław Róg" />
+
+    <link rel="stylesheet" href="css/style_dashboard.css" />
+    
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/dashboard_admin">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">WeKorepetycje</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user_dashboard">
+                        <span class="icon"><ion-icon name="bookmark-outline"></ion-icon></span>
+                        <span class="title">Użytkownicy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                    <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
+                    <span class="title">Powrót na stronę główną</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                
+                <!-- header -->
+                <div class="header">
+                    <h1>Panel administratora</h1>
+                </div>
+                <!-- user -->
+                
+            </div>
+            
+        </div>
+    </div>
+  </body>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let list = document.querySelectorAll('.navigation li');
+    function activelink(){
+        list.forEach((item) =>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+    }
+    list.forEach((item) =>
+    item.addEventListener('mouseover', activelink));
+</script>
+</html>
