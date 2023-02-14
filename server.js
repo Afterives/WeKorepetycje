@@ -6,8 +6,12 @@ const path = require("path");
 const mysql = require("mysql2");
 const ejs = require("ejs");
 const { resolve } = require("path");
+const fs = require('fs');
 
 const encodeUrl = parseUrl.urlencoded({ extended: false });
+
+// Zmienna do łączenia z bazą danych
+ // -------------------------------------------------------- //
 
 var con = mysql.createConnection({
     host: "localhost",
@@ -16,11 +20,22 @@ var con = mysql.createConnection({
     database: "userdb",
 });
 
+ // -------------------------------------------------------- //
+
 const app = express();
 
 app.set('view engine', 'ejs');
 
+// Ustawienie ścieżki dla plików html, css itp.
+ // -------------------------------------------------------- //
+
 app.use(express.static(path.join(__dirname, "public")));
+
+ // -------------------------------------------------------- //
+
+ // Ciasteczka
+// -------------------------------------------------------- //
+
 app.use(cookieParser());
 app.use(
     sessions({
@@ -31,6 +46,10 @@ app.use(
     })
 );
 
+ // -------------------------------------------------------- //
+
+// localhost:4000 (Jeśli użytkownik zalogowany może zobaczyć ile rzeczy ma w koszyku)
+ // -------------------------------------------------------- //
 app.get("/", async (req, res) => {
     const user = req.session.user;
 
@@ -44,6 +63,10 @@ app.get("/", async (req, res) => {
     return res.send(page);
 });
 
+ // -------------------------------------------------------- //
+
+ // localhost:4000/dashboard (Panel dla administratora)
+  // -------------------------------------------------------- //
 app.get("/dashboard_admin", async (req, res) => {
     const user = req.session.user;
 
@@ -58,6 +81,11 @@ app.get("/dashboard_admin", async (req, res) => {
     return res.send(page);
 });
 
+ // -------------------------------------------------------- //
+
+ // Wyświetlenie użytkowników w panelu administratora
+ // -------------------------------------------------------- //
+
 app.get("/user_dashboard", (req, res) => {
     con.query("SELECT * FROM users", (err, users) => {
         if (err) {
@@ -67,7 +95,22 @@ app.get("/user_dashboard", (req, res) => {
             console.log(users)
         }
     })
-})
+});
+
+ // -------------------------------------------------------- //
+
+ // Wyświetlanie koszyka (Nie działa)
+ // -------------------------------------------------------- //
+ 
+ app.get('/show_carts:user', function(req, res) {
+    const user = req.params.user;
+    con.query('SELECT * FROM cartitems WHERE username = ?', user, function(error, results, fields) {
+      if (error) throw error;
+      res.render('/show_carts.ejs', { show_carts: results, user: user  });
+    });
+  });
+
+  // -------------------------------------------------------- //
 
 // Registration
 app.post("/register", encodeUrl, (req, res) => {
