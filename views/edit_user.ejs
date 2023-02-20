@@ -48,36 +48,22 @@
                 
                 <!-- search -->
                 <div class="header">
-                    <h1>Panel administratora</h1>
+                    <h1>Edytuj użytkownika <%= user.username</h1>
                 </div>
                 <!-- user -->
                 
             </div>
             <div class="mainpage">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Imię</th>
-                            <th>Nazwisko</th>
-                            <th>Nazwa użytkownika</th>
-                            <th>Uprawnienia</th>
-                            <th>Akcje</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <%
-                            users.forEach((userss) => {  
-                                %>
-                                <tr>
-                                    <td><%= userss.firstname %></td>
-                                    <td><%= userss.lastname %></td>
-                                    <td><%= userss.username %></td>
-                                    <td><%= userss.rolee %></td>
-                                    <td><a href="/edit_user/:id=<%= userss.id %>">Edytuj</a></td>
-                                </tr>
-                            <% }) %>
-                    </tbody>
-                </table>
+                <div class="form">
+                    <form method="POST" action="/edit_user/<%= user.id %>">
+                        <input type="text" id="firstname" name="firstname" placeholder="Imię">
+                        <input type="text" id="lastname" name="lastname" placeholder="Nazwisko">
+                        <input type="text" id="username" name="username" placeholder="Login">
+                        <input type="password" id="password" name="password" placeholder="Hasło">
+                        <input type="text" id="rolee" name="rolee" placeholder="Rola">
+                        <input type="submit" value="Edytuj użytkownika">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

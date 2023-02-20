@@ -177,8 +177,18 @@ body {
     background: var(--white);
     transition: 0.5s;
     top: 20px;
+    display: flex;
+    justify-content: center;
   }
   .mainpage table {
-    width: 100%;
+    width: 95%;
     height: 100%;
+    border: 3px solid var(--main);
+    position: relative;
+    border-collapse: collapse;
+  }
+  .mainpage table td {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #DEDEDF;
   }

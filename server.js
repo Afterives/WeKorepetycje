@@ -112,6 +112,36 @@ app.get("/user_dashboard", (req, res) => {
 
   // -------------------------------------------------------- //
 
+// Edytowanie użytkownika
+// -------------------------------------------------------- //
+
+app.get('/edit_user/id', function(req, res)  {
+    const id = req.params.id;
+    const query = 'SELECT * FROM users WHERE id = ?';
+    con.query(query, [id], function(error, results) {
+        if (error) throw error;
+        const user = result[0];
+        res.render('edit_user', { user });
+    });
+});
+
+app.post('/edit_user/:id', function (req, res)  {
+   const id = req.params.id;
+   const firstname = req.params.firstname;
+   const lastname = req.params.lastname;
+   const username = req.params.username;
+   const password = req.params.password;
+   const rolee = req.params.rolee;
+   
+   const query = 'UPDATE users SET firstname = ?, lastname = ?, username = ?, password = ?, rolee = ? WHERE id = ?';
+   con.query(query, [firstname, lastname, username, password, id], function (error, results) {
+    if (error) throw error;
+    res.redirect('/user_dashboard');
+   });
+});
+
+// -------------------------------------------------------- //
+
 // Registration
 app.post("/register", encodeUrl, (req, res) => {
     const firstName = req.body.firstName;
